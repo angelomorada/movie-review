@@ -1,0 +1,30 @@
+<h1>Movie Review</h1>
+
+<table>
+  <thead>
+  <td>Movie Title</td>
+  <td>Review</td>
+  <td>Date Released</td>
+  <td>Country of Origin</td>
+  <td>Showing Start</td>
+  <td>Showing End</td>
+  </thead>
+  <% @posts.each do |post| %>
+    <tr>
+      <td><%= post.movie_title %></td>
+      <td><%= post.blurb %></td>
+      <td><%= post.date_released %></td>
+      <td><%= post.origin_country %></td>
+      <td><%= post.showing_start %></td>
+      <td><%= post.showing_end %></td>
+      <td></td>
+      <td>
+        <%= link_to 'Show', post_path(post) %>
+        <%= link_to 'Edit', edit_post_path(post) %>
+        <%= button_to 'Delete', post_path(post), method: :delete %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New', new_post_path %>
