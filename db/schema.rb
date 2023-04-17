@@ -10,5 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 0) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_17_075603) do
+  create_table "posts", charset: "utf8mb4", force: :cascade do |t|
+    t.string "movie_title"
+    t.text "blurb"
+    t.date "date_released"
+    t.string "origin_country"
+    t.date "showing_start"
+    t.date "showing_end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
