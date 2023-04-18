@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_17_075603) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_18_091922) do
+  create_table "address_regions", charset: "utf8mb4", force: :cascade do |t|
+    t.string "code"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", charset: "utf8mb4", force: :cascade do |t|
     t.string "movie_title"
     t.text "blurb"
