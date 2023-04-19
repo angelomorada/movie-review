@@ -53,6 +53,7 @@ gem "bootsnap", require: false
 
 gem 'kaminari'
 gem 'rest-client'
+gem 'active_model_serializers'
 
 
 group :development, :test do
